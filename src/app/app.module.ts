@@ -18,8 +18,10 @@ let messagesDe = require("devextreme/localization/messages/de.json"),
 loadMessages(messagesRu);
 loadMessages(messagesDe);
 loadMessages(messagesJa);
-  
-//Set locale according the browser language
+// Set locale according the browser language
+// locale(navigator.language);
+
+// Set locale explicitly
 locale('de-DE');
 
 @NgModule({
