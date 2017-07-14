@@ -38,11 +38,18 @@ console.log(navigator.language);
 locale('bs-Latn-BA');
 
 ```
-Primjer: https://github.com/MirzaAbazovic/example-devextreme-intl/blob/master/src/app/app.module.ts
+Primjer app.module.ts : https://github.com/MirzaAbazovic/example-devextreme-intl/blob/master/src/app/app.module.ts
 
 Napraviti poruke za zeljeni jezik u i snimiti ih u json file u assets npr.
 assets/localization/bs-Latn-BA.json
-Primjer: https://github.com/MirzaAbazovic/example-devextreme-intl/blob/master/src/assets/localization/bs-Latn-BA.json
+
+Primjer bs-Latn-BA.json: https://github.com/MirzaAbazovic/example-devextreme-intl/blob/master/src/assets/localization/bs-Latn-BA.json
+
+
+app.module.ts deklarise gdje mu se nalaze poruke sa linijom koda
+```
+let  messages_bs_Latn_BA = require("assets/localization/bs-Latn-BA.json");
+```
 
 ### Napomena 
 Chrome podrzava samo hr i sr lista na https://developer.chrome.com/webstore/i18n
