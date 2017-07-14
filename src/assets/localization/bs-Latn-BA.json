@@ -1,56 +1,5 @@
-# Lokalizacija sa Devextreme Angular CLI
-
-
-
-## Instalacija
-Instalirati https://www.npmjs.com/package/devextreme-intl
-```Shell
-npm install devextreme-intl -–save
-```
-
-## Uvezivanje na nivou app
-
-U app.mopdule.ts importovati potrebne module i sa njima importovati poruke i setovati  
-
-```
-//import it to change locale and load localization messages
-import { locale, loadMessages } from 'devextreme/localization'; 
-
-import { DevExtremeModule } from 'devextreme-angular';
-import 'devextreme-intl';
-
-import { AppComponent } from './app.component';
-
-//Load localized messages (English included by default)
-// let messagesDe = require("devextreme/localization/messages/de.json");
-// let  messagesJa = require("devextreme/localization/messages/ja.json");
-// let  messagesRu = require("devextreme/localization/messages/ru.json");
-let  messages_bs_Latn_BA = require("assets/localization/bs-Latn-BA.json");
-// loadMessages(messagesRu);
-// loadMessages(messagesDe);
-// loadMessages(messagesJa);
-loadMessages(messages_bs_Latn_BA);
-
-// Set locale according the browser language
-// locale(navigator.language);
-console.log(navigator.language);
-// Set locale explicitly
-locale('bs-Latn-BA');
-
-```
-
-Napraviti poruke za zeljeni jezik u i snimiti ih u json file u assets npr.
-
-assets/localization/bs-Latn-BA.json
-
-### Napomena 
-Chrome podrzava samo hr i sr lista na https://developer.chrome.com/webstore/i18n
-IE podrzava i bs-Latn-BA
-
-Primjer engleskog json-a
-```
 {
-    "en": {
+    "bs-Latn-BA": {
         "Yes": "Yes",
         "No": "No",
         "Cancel": "Cancel",
@@ -139,7 +88,7 @@ Primjer engleskog json-a
         "dxDataGrid-editingUndeleteRow": "Undelete",
         "dxDataGrid-editingConfirmDeleteMessage": "Are you sure you want to delete this record?",
         "dxDataGrid-validationCancelChanges": "Cancel changes",
-        "dxDataGrid-groupPanelEmptyText": "Drag a column header here to group by that column",
+        "dxDataGrid-groupPanelEmptyText": "Prevucite kolonu ovdje da bi grupisali podatke prema njoj",
         "dxDataGrid-noDataText": "No data",
         "dxDataGrid-searchPanelPlaceholder": "Search...",
         "dxDataGrid-filterRowShowAllText": "(All)",
@@ -166,15 +115,15 @@ Primjer engleskog json-a
         "dxDataGrid-editingSaveAllChanges": "Save changes",
         "dxDataGrid-editingCancelAllChanges": "Discard changes",
         "dxDataGrid-editingAddRow": "Add a row",
-        "dxDataGrid-summaryMin": "Min: {0}",
+        "dxDataGrid-summaryMin": "Minimum: {0}",
         "dxDataGrid-summaryMinOtherColumn": "Min of {1} is {0}",
-        "dxDataGrid-summaryMax": "Max: {0}",
+        "dxDataGrid-summaryMax": "Maximum: {0}",
         "dxDataGrid-summaryMaxOtherColumn": "Max of {1} is {0}",
         "dxDataGrid-summaryAvg": "Avg: {0}",
         "dxDataGrid-summaryAvgOtherColumn": "Avg of {1} is {0}",
         "dxDataGrid-summarySum": "Sum: {0}",
         "dxDataGrid-summarySumOtherColumn": "Sum of {1} is {0}",
-        "dxDataGrid-summaryCount": "Count: {0}",
+        "dxDataGrid-summaryCount": "Ukupno: {0}",
         "dxDataGrid-columnFixingFix": "Fix",
         "dxDataGrid-columnFixingUnfix": "Unfix",
         "dxDataGrid-columnFixingLeftPosition": "To the left",
@@ -288,16 +237,3 @@ Primjer engleskog json-a
         "vizExport-exportButtonText": "{0} file"
     }
 }
-
-```
-
-
-## Linkovi
-
-* https://js.devexpress.com/Documentation/Guide/Widgets/Common/UI_Widgets/Localization/
-
-* https://github.com/DevExpress/DevExtreme-Intl
-
-* https://js.devexpress.com/Documentation/Guide/Widgets/Common/UI_Widgets/Localization_-_Use_Globalize/
-
-

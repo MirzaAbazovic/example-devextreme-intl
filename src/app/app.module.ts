@@ -11,18 +11,22 @@ import 'devextreme-intl';
 import { AppComponent } from './app.component';
 
 //Load localized messages (English included by default)
-let messagesDe = require("devextreme/localization/messages/de.json"),
-  messagesJa = require("devextreme/localization/messages/ja.json"),
-  messagesRu = require("devextreme/localization/messages/ru.json");
-  
-loadMessages(messagesRu);
-loadMessages(messagesDe);
-loadMessages(messagesJa);
+// let messagesDe = require("devextreme/localization/messages/de.json");
+// let  messagesJa = require("devextreme/localization/messages/ja.json");
+// let  messagesRu = require("devextreme/localization/messages/ru.json");
+let  messages_bs_Latn_BA = require("assets/localization/bs-Latn-BA.json");
+// loadMessages(messagesRu);
+// loadMessages(messagesDe);
+// loadMessages(messagesJa);
+loadMessages(messages_bs_Latn_BA);
+
 // Set locale according the browser language
 // locale(navigator.language);
-
+console.log(navigator.language);
 // Set locale explicitly
-locale('de-DE');
+//locale('bs-Latn-BA');
+locale('sr');
+
 
 @NgModule({
   declarations: [
