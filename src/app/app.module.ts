@@ -24,8 +24,9 @@ loadMessages(messages_bs_Latn_BA);
 // locale(navigator.language);
 console.log(navigator.language);
 // Set locale explicitly
-//locale('bs-Latn-BA');
-locale('sr');
+locale('bs-Latn-BA');
+// na chrome nema bs-Latn-BA ima samo hr i sr
+//locale('sr');
 
 
 @NgModule({
