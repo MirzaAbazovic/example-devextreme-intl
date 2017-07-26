@@ -1,5 +1,7 @@
 # Lokalizacija sa Devextreme Angular CLI
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/MirzaAbazovic/example-devextreme-intl.svg)](https://greenkeeper.io/)
+
 
 ## Instalacija
 Instalirati https://www.npmjs.com/package/devextreme-intl sa komandom
